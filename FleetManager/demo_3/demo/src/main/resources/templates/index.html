@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 th:if="${condition}">True</h1>
+        <ul>
+            <li th:each="item : ${listItems}" th:text="${item}">item1</li>
+            <!--/*-->
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li>item5</li>
+            <!--*/-->
+        </ul>
+    </header>
+    <main>
+        <p th:text="${message}">Test message</p>
+    </main>
+</body>
+</html>
