@@ -1,0 +1,320 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+*, *:after, *:before {
+  box-sizing: border-box; }
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav, ul, li {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+a:visited {
+  color: inherti; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/*# sourceMappingURL=reset.css.map */
+html {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: Sawarabi Mincho; }
+
+.wrap {
+  width: 85.4%;
+  margin: 7.8vw auto 0; }
+
+.title {
+  margin: 0 auto;
+  width: 11.25vw;
+  text-align: center;
+  font-size: 2.4vw;
+  display: flex;
+  flex-direction: column; }
+  .title:after {
+    display: inline-block;
+    content: "";
+    border-bottom: 1px solid;
+    width: 6vw;
+    padding-top: 1.45vw;
+    margin: 0 auto; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 62.5vw;
+  padding: 6.5625vw 6.5% 7.6vw 14%;
+  text-align: center;
+  position: relative; }
+  header .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 8%; }
+    header .head .head-ti {
+      display: flex;
+      writing-mode: sideways-rl;
+      padding-top: 4vw;
+      width: 86%;
+      height: 41%;
+      position: relative;
+      margin-left: 14.5%; }
+      header .head .head-ti .sub {
+        height: 52%;
+        width: 18%;
+        font-size: 1.18vw;
+        position: absolute;
+        top: 3vw;
+        right: 0;
+        line-height: 150%; }
+      header .head .head-ti .main {
+        width: 22.2%;
+        height: 46.5px;
+        font-size: 2.95vw;
+        -webkit-text-stroke: 1px #838383;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        line-height: 160%; }
+    header .head .nav-menu {
+      font-size: 1.2vw;
+      height: 12.5vw;
+      width: 76%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 5vw; }
+  header .head-img {
+    background-image: url(../img/tonkatsu.jpg);
+    background-size: cover;
+    width: 80%;
+    height: 100%;
+    z-index: 10; }
+  header .head-cl {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 73%;
+    width: 60.5%;
+    background-color: #800000; }
+  header .btn {
+    height: 20.4vw;
+    width: 6.7vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: none;
+    background: linear-gradient(#BF0000, #390000);
+    padding: 0.3vw; }
+    header .btn_wrap {
+      width: 6.1vw;
+      height: 19.7vw;
+      border: solid 1px #FFFFFF;
+      padding: 3.8vw 2vw; }
+      header .btn_wrap p {
+        color: #FFFFFF;
+        font-size: 1.18vw;
+        line-height: 150%; }
+
+.picky {
+  height: 60.625vw;
+  position: relative;
+  margin-bottom: 13.28vw; }
+  .picky .wrap {
+    text-align: center; }
+    .picky .wrap .sl {
+      width: 68.48%;
+      height: 27.1vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 15.76%;
+      top: 16.75%;
+      z-index: 10;
+      font-size: 1.475vw;
+      box-shadow: 0 10px 99px #000000; }
+      .picky .wrap .sl .slide {
+        width: 100%;
+        height: 100%;
+        position: relative; }
+        .picky .wrap .sl .slide .slide-item {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          list-style: none;
+          opacity: 0;
+          transition: opacity 2s; }
+          .picky .wrap .sl .slide .slide-item.appear {
+            opacity: 1; }
+          .picky .wrap .sl .slide .slide-item img {
+            width: 100%;
+            height: 100%; }
+    .picky .wrap .picky-tx {
+      height: 36vw;
+      position: absolute;
+      bottom: 0;
+      width: 85.4%;
+      background-color: #800000;
+      padding-top: 18.05vw;
+      font-size: 1.475vw;
+      line-height: 275%; }
+      .picky .wrap .picky-tx .beppu {
+        font-size: 1.84375vw; }
+
+.menu {
+  text-align: center;
+  margin-bottom: 13.28vw; }
+  .menu .wrap p {
+    margin-top: 5.5vw;
+    font-size: 1.2vw; }
+  .menu .wrap .menu-img_1 {
+    margin-top: 4.6875vw;
+    height: 32.8125vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .menu .wrap .menu-img_1_1 {
+      width: 60.4%;
+      background-image: url(../img/menu1.png);
+      background-size: cover; }
+    .menu .wrap .menu-img_1_2 {
+      width: 38.43%;
+      background-image: url(../img/menu4.png);
+      background-size: cover; }
+  .menu .wrap .menu-img_2 {
+    margin-top: 1.5625vw;
+    height: 26.5625vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .menu .wrap .menu-img_2_1 {
+      width: 68%;
+      background-image: url(../img/menu2.png);
+      background-size: cover; }
+    .menu .wrap .menu-img_2_2 {
+      width: 30.5%;
+      background-image: url(../img/menu3.png);
+      background-size: cover; }
+
+.access {
+  position: relative;
+  height: 40.625vw;
+  margin-bottom: 13.28vw; }
+  .access .nav {
+    width: 76.72%;
+    line-height: 275%;
+    background-color: #800000;
+    font-size: 1.2vw;
+    height: 59.6%;
+    position: absolute;
+    left: 0;
+    bottom: 0; }
+    .access .nav p {
+      text-align: center;
+      margin-top: 9.7vw;
+      margin-right: 47vw; }
+  .access .map {
+    width: 68.75%;
+    height: 24.5vw;
+    position: absolute;
+    right: 0;
+    bottom: 14.62%;
+    z-index: 10;
+    box-shadow: 10px 10px 99px #000000; }
+
+footer {
+  text-align: center;
+  height: 7vw;
+  padding-bottom: 13.125vw; }
+  footer .wrap:before {
+    display: block;
+    content: "";
+    border-top: 1px solid;
+    width: 100%;
+    padding-top: 5.8vw; }
+  footer .wrap p {
+    font-size: 1.2vw; }
+
+/*# sourceMappingURL=main.css.map */

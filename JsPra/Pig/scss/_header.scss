@@ -1,0 +1,87 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  height: 62.5vw;
+  padding: 6.5625vw 6.5% 7.6vw 14%;
+  text-align: center;
+  position: relative;
+  .head{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 8%;
+    .head-ti{
+      display: flex;
+      writing-mode: sideways-rl;
+      padding-top: 4vw;
+      width: 86%;
+      height: 41%;
+      position: relative;
+      margin-left: 14.5%;
+      .sub{
+        height: 52%;
+        width: 18%;
+        font-size: 1.18vw;
+        position: absolute;
+        top: 3vw;
+        right: 0;
+        line-height: 150%;
+      }
+      .main{
+        width: 22.2%;
+        height: 46.5px;
+        font-size: 2.95vw;
+        -webkit-text-stroke: 1px #838383;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        line-height: 160%;
+      }
+    }
+    .nav-menu{
+      font-size: 1.2vw;
+      height: 12.5vw;
+      width: 76%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 5vw;
+    }
+  }
+  .head-img{
+    background-image: url(../img/tonkatsu.jpg);
+    background-size: cover;
+    width: 80%;
+    height: 100%;
+    z-index: 10;
+  }
+  .head-cl{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 73%;
+    width: 60.5%;
+    background-color: #800000;
+  }
+  .btn{
+    height: 20.4vw;
+    width: 6.7vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: none;
+    background: linear-gradient(#BF0000,#390000);
+    padding: 0.3vw;
+    &_wrap{
+      width: 6.1vw;
+      height: 19.7vw;
+      border: solid 1px #FFFFFF;
+      padding: 3.8vw 2vw;
+      p{
+        color: #FFFFFF;
+        font-size: 1.18vw;
+        line-height: 150%;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.menu{
+  text-align: center;
+  margin-bottom: 13.28vw;
+  .wrap{
+    p{
+      margin-top: 5.5vw;
+      font-size: 1.2vw;
+    }
+    .menu-img{
+      &_1{
+        margin-top: 4.6875vw;
+        height: 32.8125vw;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &_1{
+          width: 60.4%;
+          background-image: url(../img/menu1.png);
+          background-size: cover;
+        }
+        &_2{
+          width: 38.43%;
+          background-image: url(../img/menu4.png);
+          background-size: cover;
+        }
+      }
+      &_2{
+        margin-top: 1.5625vw;
+        height: 26.5625vw;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &_1{
+          width: 68%;
+          background-image: url(../img/menu2.png);
+          background-size: cover;
+        }
+        &_2{
+          width: 30.5%;
+          background-image: url(../img/menu3.png);
+          background-size: cover;
+        }
+      }
+    }
+  }
+}

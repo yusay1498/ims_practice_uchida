@@ -1,0 +1,55 @@
+.picky{
+  height: 60.625vw;
+  position: relative;
+  margin-bottom: 13.28vw;
+  .wrap{
+    text-align: center;
+    .sl{
+      width: 68.48%;
+      height: 27.1vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 15.76%;
+      top: 16.75%;
+      z-index: 10;
+      font-size: 1.475vw;
+      box-shadow: 0 10px 99px #000000;
+      .slide{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .slide-item{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          list-style: none;
+          opacity: 0;
+          transition: opacity 2s;
+          &.appear{
+            opacity: 1;
+          }
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+      }
+    }
+    .picky-tx{
+      height: 36vw;
+      position: absolute;
+      bottom: 0;
+      width: 85.4%;
+      background-color: #800000;
+      padding-top: 18.05vw;
+      font-size: 1.475vw;
+      line-height: 275%;
+      .beppu{
+        font-size: 1.84375vw;
+      }
+    }
+  }
+}

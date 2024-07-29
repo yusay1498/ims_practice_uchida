@@ -1,0 +1,17 @@
+footer {
+  text-align: center;
+  height: 7vw;
+  padding-bottom: 13.125vw;
+  .wrap{
+    &:before{
+      display: block;
+      content: "";
+      border-top: 1px solid;
+      width: 100%;
+      padding-top: 5.8vw;
+    }
+    p{
+      font-size: 1.2vw;
+    }
+  }
+}
