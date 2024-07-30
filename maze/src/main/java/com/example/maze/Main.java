@@ -94,34 +94,30 @@ public class Main {
         jj = fw.getJ();
         System.out.println(jj);
 
-        while (num2[ii][jj] != 3) {
-            if (num2[ii - 1][jj] != 1) {
-                bh.setI(ii);
-                bh.setJ(jj);
-                num2 = bh.backHeight(num2, ii, jj);
-                ii = bh.getI();
-                System.out.println(ii);
-                jj = bh.getJ();
-                System.out.println(jj);
-            } else if (num2[ii][jj - 1] != 1) {
-                num2 = bw.backWidth(num2, ii, jj);
-                ii = bw.getI();
-                System.out.println(ii);
-                jj = bw.getJ();
-                System.out.println(jj);
-            } else if (num2[ii + 1][jj] != 1) {
-                num2 = fh.forwardHeight(num2, ii, jj);
-                ii = fh.getI();
-                System.out.println(ii);
-                jj = fh.getJ();
-                System.out.println(jj);
-            } else {
-                num2 = fw.forwardWidth(num2, ii, jj);
-                ii = fw.getI();
-                System.out.println(ii);
-                jj = fw.getJ();
-                System.out.println(jj);
-            }
+        if (num2[ii - 1][jj] != 1) {
+            num2 = bh.backHeight(num2, ii, jj);
+            ii = bh.getI();
+            System.out.println(ii);
+            jj = bh.getJ();
+            System.out.println(jj);
+        } else if (num2[ii][jj - 1] != 1) {
+            num2 = bw.backWidth(num2, ii, jj);
+            ii = bw.getI();
+            System.out.println(ii);
+            jj = bw.getJ();
+            System.out.println(jj);
+        } else if (num2[ii + 1][jj] != 1) {
+            num2 = fh.forwardHeight(num2, ii, jj);
+            ii = fh.getI();
+            System.out.println(ii);
+            jj = fh.getJ();
+            System.out.println(jj);
+        } else {
+            num2 = fw.forwardWidth(num2, ii, jj);
+            ii = fw.getI();
+            System.out.println(ii);
+            jj = fw.getJ();
+            System.out.println(jj);
         }
 
 
