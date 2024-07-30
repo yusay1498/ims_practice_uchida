@@ -72,5 +72,19 @@ public class Main {
 
         System.out.println("--- TreeMap ---");
         treeMap.forEach((s, i) -> System.out.println(s + " : " + i));
+
+        Deque deque = new ArrayDeque();
+        deque.add(1);
+        deque.add(2);
+        deque.add(3);
+        deque.getFirst();
+        deque.getLast();
+
+        Stack stack = new Stack();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.pop();
+        stack.pop();
     }
 }
