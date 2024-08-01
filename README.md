@@ -1,4 +1,4 @@
-# ims_pra_Uchida
+# ims_practice_Uchida
 IMDL研修の練習用に作った</br>
 他にも色々学習内容の記録として他のものもアップロードするかも
 
