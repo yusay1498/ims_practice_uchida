@@ -142,7 +142,6 @@ public class Main {
                 if (j < maze[0].length - 1 && (solvedMaze[i][j + 1] == 0 || solvedMaze[i][j + 1] == 3)) stack.push(new int[]{i, j + 1});
             }
         }
-
         return solvedMaze;
     }
 }
