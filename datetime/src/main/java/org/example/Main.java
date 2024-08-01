@@ -1,8 +1,6 @@
 package org.example;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -28,5 +26,15 @@ public class Main {
         calendar.setTime(legcyDate);
         calendar.add(Calendar.HOUR_OF_DAY, 12);
         System.out.println(calendar.getTime());
+
+        dateTime.plusHours(12);
+        System.out.println(dateTime);
+
+        LocalDateTime dateTimePlus12 = dateTime.plusHours(12);
+        System.out.println(dateTimePlus12);
+
+        Clock clock = Clock.fixed(Instant.parse("2024-08-01T12:00:00+09:00"), ZoneId.of("Asia/Tokyo"));
+        LocalDateTime now = LocalDateTime.now(clock);
+        System.out.println(now);
     }
 }
