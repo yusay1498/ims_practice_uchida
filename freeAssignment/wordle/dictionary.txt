@@ -1,0 +1,10 @@
+grape
+house
+bread
+chair
+queen
+apple
+heart
+music
+water
+smile
