@@ -36,43 +36,48 @@ public class Main {
 
         while (true) {
             List<String> answerWordList = new LinkedList<>();
-            for (int i = 0; i < answerWord.length(); i++) {
-                answerWordList.add(answerWord.substring(i, i + 1));
-            }
             String userAnswerString = scannerNumber();
-            List<String> userAnswerList = new LinkedList<>();
-            for (int i = 0; i < userAnswerString.length(); i++) {
-                userAnswerList.add(userAnswerString.substring(i, i + 1));
-            }
-            turnCount++;
-            int blowPoints = 0;
-
-            for (int confirmAnswer = 0; confirmAnswer < answerWord.length(); confirmAnswer++) {
-                if (answerWord.charAt(confirmAnswer) == userAnswerString.charAt(confirmAnswer)) {
-                    userAnswerList.set(confirmAnswer, "[" + userAnswerList.get(confirmAnswer) + "]");
-                    blowPoints++;
+            if (cpuDictionary.stream()
+                    .anyMatch(word -> word.equals(userAnswerString))) {
+                for (int i = 0; i < answerWord.length(); i++) {
+                    answerWordList.add(answerWord.substring(i, i + 1));
                 }
-            }
+                List<String> userAnswerList = new LinkedList<>();
+                for (int i = 0; i < userAnswerString.length(); i++) {
+                    userAnswerList.add(userAnswerString.substring(i, i + 1));
+                }
+                turnCount++;
+                int blowPoints = 0;
 
-            for (int confirmAnswer = 0; confirmAnswer < userAnswerList.size(); confirmAnswer++) {
-                String strConfirm = userAnswerList.get(confirmAnswer);
-                for (int answerIndexNum = 0; answerIndexNum < answerWordList.size(); answerIndexNum++) {
-                    if (strConfirm.equals(answerWordList.get(answerIndexNum))) {
-                        userAnswerList.set(confirmAnswer, "(" + userAnswerList.get(confirmAnswer) + ")");
+                for (int confirmAnswer = 0; confirmAnswer < answerWord.length(); confirmAnswer++) {
+                    if (answerWord.charAt(confirmAnswer) == userAnswerString.charAt(confirmAnswer)) {
+                        userAnswerList.set(confirmAnswer, "[" + userAnswerList.get(confirmAnswer) + "]");
+                        blowPoints++;
                     }
                 }
-            }
 
-            System.out.print("CPU: ");
-            for (int i = 0; i < userAnswerList.size(); i++) {
-                System.out.print(userAnswerList.get(i));
-            }
+                for (int confirmAnswer = 0; confirmAnswer < userAnswerList.size(); confirmAnswer++) {
+                    String strConfirm = userAnswerList.get(confirmAnswer);
+                    for (int answerIndexNum = 0; answerIndexNum < answerWordList.size(); answerIndexNum++) {
+                        if (strConfirm.equals(answerWordList.get(answerIndexNum))) {
+                            userAnswerList.set(confirmAnswer, "(" + userAnswerList.get(confirmAnswer) + ")");
+                        }
+                    }
+                }
 
-            System.out.println("\n");
+                System.out.print("CPU: ");
+                for (int i = 0; i < userAnswerList.size(); i++) {
+                    System.out.print(userAnswerList.get(i));
+                }
 
-            if (blowPoints == answerWordList.size()) {
-                System.out.println("CPU: Congrats!");
-                break;
+                System.out.println("\n");
+
+                if (blowPoints == answerWordList.size()) {
+                    System.out.println("CPU: Congrats!");
+                    break;
+                }
+            } else {
+                System.out.println("その単語はありません");
             }
         }
     }
