@@ -53,21 +53,21 @@ public class Main {
                 cpuDictionary.remove(userWord);
             }
 
+            judgment(judge, userWord, null);
             if (judge > 0) {
-                judgment(judge, userWord, null);
                 break;
             }
 
-            String cpuWord = null;
+            String cpuWord = "";
 
             for (String word : cpuDictionary) {
-                if (word.charAt(0) == userWord.length() - 1) {
+                if (word.startsWith(userWord.substring(userWord.length() - 1))) {
                     cpuWord = word;
                     break;
                 }
             }
 
-            if (cpuWord != null) {
+            if (cpuWord != "") {
                 cpuDictionary.remove(cpuWord);
             }
 
@@ -78,10 +78,14 @@ public class Main {
                 judge = -1;
             }
 
+            judgment(judge, userWord, cpuWord);
             if (judge > 0) {
-                judgment(judge, userWord ,cpuWord);
                 break;
             }
+        }
+        if (cpuDictionary.isEmpty()) {
+            System.out.println("CPU: これ以上思いつきません");
+            System.out.println("CPU: 参りました");
         }
     }
 
