@@ -1,8 +1,6 @@
 package org.example;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.LinkedHashSet;
@@ -14,12 +12,14 @@ public class Main {
         Path dictionaryPath = Path.of("dictionary.txt");
 
         Set<String> cpuDictionary = new LinkedHashSet<>();
+        Set<String> memoryDictionary = new LinkedHashSet<>();
         Set<String> usedWords = new LinkedHashSet<>();
 
         try (BufferedReader bufferedReader = Files.newBufferedReader(dictionaryPath)) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 cpuDictionary.add(line);
+                memoryDictionary.add(line);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -48,10 +48,8 @@ public class Main {
 
             usedWords.add(userWord);
 
-            if (cpuDictionary.stream()
-                    .equals(userWord)) {
-                cpuDictionary.remove(userWord);
-            }
+            cpuDictionary.remove(userWord);
+
 
             judgment(judge, userWord, null);
             if (judge > 0) {
@@ -67,6 +65,7 @@ public class Main {
                 }
             }
 
+            usedWords.add(cpuWord);
             if (cpuWord != "") {
                 cpuDictionary.remove(cpuWord);
             }
@@ -83,6 +82,20 @@ public class Main {
                 break;
             }
         }
+
+        try (BufferedWriter bufferedWriter = Files.newBufferedWriter(dictionaryPath)) {
+            //TODO: 重複した文字を消す
+            for (String word : memoryDictionary) {
+                bufferedWriter.append(word).append("\n");
+            }
+
+            for (String word : usedWords) {
+                bufferedWriter.append(word).append("\n");
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         if (cpuDictionary.isEmpty()) {
             System.out.println("CPU: これ以上思いつきません");
             System.out.println("CPU: 参りました");
