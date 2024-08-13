@@ -16,5 +16,15 @@ public class Main {
         System.out.println(Colors.RED.ordinal());
         System.out.println(Colors.CYAN.ordinal());
         System.out.println(Colors.YELLOW.ordinal());
+
+        System.out.println(Colors.BLUE.getCode() + "Blue" + Colors.RESET.getCode());
+        System.out.println(Colors.GREEN.getCode() + "Green" + Colors.RESET.getCode());
+        System.out.println(Colors.RED.getCode() + "Red" + Colors.RESET.getCode());
+
+        Genders gender = Genders.valueOf("MALE");
+        System.out.println(gender + "\t" + gender.getCode());
+
+        gender = Genders.of("F");
+        System.out.println(gender + "\t" + gender.getCode());
     }
 }
