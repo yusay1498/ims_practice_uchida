@@ -7,12 +7,15 @@ import java.util.Objects;
 @RestController
 @RequestMapping("/persons")
 public class PersonController {
-    @GetMapping
+    @GetMapping("/{id:^[0-9]{4}$}")
     public Person get(
-            @RequestParam("age") int age
+            @PathVariable String id,
+            @RequestHeader(value = "X-Custom-Header", required = false) String xCustomHeader
     ) {
+        System.out.println(xCustomHeader);
+
         return new Person(
-                "0001", "alice", age
+                id, "alice", 7
         );
     }
 
@@ -26,10 +29,39 @@ public class PersonController {
             @PathVariable("id") String id,
             @RequestBody Person person
     ) {
-        if (!Objects.equals(person.id(), id)) {
+        if (!Objects.equals(person.getId(), id)) {
             throw new IllegalArgumentException("id mismatch");
         }
 
         return person;
+    }
+
+    @PatchMapping("/{id}")
+    public Person patch(
+            @PathVariable("id") String id,
+            @RequestBody PersonPatchRequest personPatch
+    ) {
+        Person exitedPerson = new Person(
+                "0001", "alice", 7);
+
+        Person updatedPerson = exitedPerson.copy(
+                personPatch.getId(),
+                personPatch.getName(),
+                personPatch.getAge()
+        );
+
+        return updatedPerson;
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(
+            @PathVariable("id") String id
+    ) {
+
+    }
+
+    @GetMapping("/error")
+    public void getError() {
+        throw new RuntimeException("Exception handle demo");
     }
 }
