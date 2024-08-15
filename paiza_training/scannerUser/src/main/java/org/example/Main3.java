@@ -2,27 +2,13 @@ package org.example;
 
 import java.util.*;
 
-//年齢でsort
-
-//入力例
-//3
-//mako 13 08/08 nara
-//megumi 14 11/02 saitama
-//taisei 16 12/04 nagano
-//14
-
-//出力
-//mako 13 08/08 nara
-//megumi 14 11/02 saitama
-//taisei 16 12/04 nagano
-
 public class Main3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt();
-        List<Map<String, Objects>> users = new ArrayList<>();
+        List<Map<String, Object>> users = new ArrayList<>();
         for (int i = 0; i < N; i++) {
-            Map<String, Objects> user = new HashMap<>();
+            Map<String, Object> user = new HashMap<>();
             user.put("nickname", scanner.next());
             user.put("old", Integer.parseInt(scanner.next()));
             user.put("birth", scanner.next());
@@ -30,10 +16,10 @@ public class Main3 {
             users.add(user);
         }
 
+        users.sort(Comparator.comparing(user -> (int) user.get("old")));
 
-
-        for (Map<String, String> user : users) {
-
+        for (Map<String, Object> user : users) {
+            System.out.println(user.get("nickname") + " " + user.get("old") + " " + user.get("birth") + " " + user.get("state"));
         }
     }
 }
