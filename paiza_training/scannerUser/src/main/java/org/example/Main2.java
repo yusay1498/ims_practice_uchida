@@ -2,6 +2,16 @@ package org.example;
 
 import java.util.*;
 
+//入力例
+//3
+//mako 13 08/08 nara
+//megumi 14 11/02 saitama
+//taisei 16 12/04 nagano
+//14
+
+//出力
+//megumi
+
 public class Main2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
