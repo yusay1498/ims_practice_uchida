@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>scannerUser</module>
+        <module>userClass</module>
     </modules>
 
     <properties>
