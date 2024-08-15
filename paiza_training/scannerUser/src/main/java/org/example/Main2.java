@@ -6,8 +6,10 @@ public class Main2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt();
-        scanner.nextLine();
-        int age = scanner.nextInt();
+        for (int i = 0; i < N; i++) {
+            scanner.nextLine();
+        }
+        String age = scanner.nextLine();
         List<Map<String, String>> users = new ArrayList<>();
         for (int i = 0; i < N; i++) {
             Map<String, String> user = new HashMap<>();
@@ -18,7 +20,7 @@ public class Main2 {
             users.add(user);
         }
         for (Map<String, String> user : users) {
-            if (user.get("old").equals(age) {
+            if (user.get("old").equals(age)) {
                 System.out.println("User{");
                 System.out.println("nickname : " + user.get("nickname"));
                 System.out.println("old : " + user.get("old"));
