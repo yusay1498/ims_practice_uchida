@@ -64,4 +64,9 @@ public class PersonController {
     public void getError() {
         throw new RuntimeException("Exception handle demo");
     }
+
+    @GetMapping("/errorArgs")
+    public void getErrorArgs() {
+        throw new IllegalArgumentException("error args handle demo");
+    }
 }
