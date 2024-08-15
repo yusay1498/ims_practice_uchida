@@ -16,7 +16,6 @@ public class Main2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt();
-        int age = scanner.nextInt();
         List<Map<String, String>> users = new ArrayList<>();
         for (int i = 0; i < N; i++) {
             Map<String, String> user = new HashMap<>();
@@ -26,6 +25,7 @@ public class Main2 {
             user.put("state", scanner.next());
             users.add(user);
         }
+        int age = scanner.nextInt();
         for (Map<String, String> user : users) {
             if (user.get("old").equals(String.valueOf(age))) {
                 System.out.println(user.get("nickname"));
