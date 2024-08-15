@@ -23,10 +23,10 @@ public class Main {
     }
 
     public static void getNameByNum(int n , List<Map<String, Object>> users) {
-        System.out.println(users.get(n).get("name"));
+        System.out.println(users.get(n - 1).get("name"));
     }
 
     public static void getNum(int n , List<Map<String, Object>> users) {
-        System.out.println(users.get(n).get("num"));
+        System.out.println(users.get(n - 1).get("num"));
     }
 }
