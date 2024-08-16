@@ -8,6 +8,8 @@ public class Main3 {
         int usersNum = scanner.nextInt();
         int orderNum = scanner.nextInt();
         List<Map<String, Integer>> users = new ArrayList<>();
+
+        // ユーザーの情報を読み取る
         for (int i = 0; i < usersNum; i++) {
             Map<String, Integer> user = new HashMap<>();
             user.put("age", scanner.nextInt());
@@ -16,29 +18,36 @@ public class Main3 {
             users.add(user);
         }
 
+        // 注文の処理
         for (int i = 0; i < orderNum; i++) {
             int userId = scanner.nextInt() - 1;
+            if (userId < 0 || userId >= usersNum) {
+                System.out.println("Invalid userId: " + (userId + 1));
+                continue;
+            }
             String command = scanner.next();
-            if (users.get(userId).get("alcoholCount") == 0) {
-                if (command.equals("food")) {
-                    users.get(userId).put("sum", users.get(userId).get("sum") + scanner.nextInt());
-                } else if (command.equals("softdrink")) {
-                    users.get(userId).put("sum", users.get(userId).get("sum") + scanner.nextInt());
-                } else if (command.equals("alcohol") && users.get(userId).get("age") >= 20) {
-                    users.get(userId).put("alcoholCount", 1);
-                    users.get(userId).put("sum", users.get(userId).get("sum") + scanner.nextInt());
+            int amount = scanner.nextInt();  // ここで値を1回だけ取得
+
+            Map<String, Integer> user = users.get(userId);
+            if (user.get("alcoholCount") == 0) {
+                if (command.equals("food") || command.equals("softdrink")) {
+                    user.put("sum", user.get("sum") + amount);
+                } else if (command.equals("alcohol") && user.get("age") >= 20) {
+                    user.put("sum", user.get("sum") + amount);
+                    user.put("alcoholCount", 1);
                 }
             } else {
                 if (command.equals("food")) {
-                    users.get(userId).put("sum", users.get(userId).get("sum") + scanner.nextInt() - 200);
+                    user.put("sum", user.get("sum") + amount - 200);
                 } else if (command.equals("softdrink")) {
-                    users.get(userId).put("sum", users.get(userId).get("sum") + scanner.nextInt());
-                } else if (command.equals("alcohol") && users.get(userId).get("age") >= 20) {
-                    users.get(userId).put("sum", users.get(userId).get("sum") + scanner.nextInt());
+                    user.put("sum", user.get("sum") + amount);
+                } else if (command.equals("alcohol") && user.get("age") >= 20) {
+                    user.put("sum", user.get("sum") + amount);
                 }
             }
         }
 
+        // 結果の出力
         for (Map<String, Integer> user : users) {
             System.out.println(user.get("sum"));
         }
