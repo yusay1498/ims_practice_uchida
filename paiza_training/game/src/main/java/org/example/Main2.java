@@ -43,16 +43,16 @@ public class Main2 {
             } else if (eventName.equals("pray")) {
                 users.get(userId).put("fortunePoint", users.get(userId).get("fortunePoint") + scanner.nextInt());
             }
+        }
 
-            for (Map<String, Integer> user : users) {
-                System.out.print(user.get("level") + " ");
-                System.out.print(user.get("hitPoint") + " ");
-                System.out.print(user.get("attackPoint" + " "));
-                System.out.print(user.get("defensePoint" + " "));
-                System.out.print(user.get("speed" + " "));
-                System.out.print(user.get("cleverPoint" + " "));
-                System.out.print(user.get("fortunePoint"));
-            }
+        for (Map<String, Integer> user : users) {
+            System.out.print(user.get("level") + " ");
+            System.out.print(user.get("hitPoint") + " ");
+            System.out.print(user.get("attackPoint") + " ");
+            System.out.print(user.get("defensePoint") + " ");
+            System.out.print(user.get("speed") + " ");
+            System.out.print(user.get("cleverPoint") + " ");
+            System.out.println(user.get("fortunePoint"));
         }
     }
 }
