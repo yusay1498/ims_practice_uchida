@@ -1,0 +1,6 @@
+spring.application.name: demo_jpa
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ojt
+    username: postgres
+    password: postgres
