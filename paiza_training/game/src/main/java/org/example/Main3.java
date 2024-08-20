@@ -52,9 +52,9 @@ public class Main3 {
                     buff(users, userId2);
                     attack(users, userId1, userId2, userSkill1);
                 }
-                if (users.get(userId1).get(userSkill1) > users.get(userId2).get(userSkill2)) {
+                if (users.get(userId1).get(userSkill1) < users.get(userId2).get(userSkill2)) {
                     attack(users, userId1, userId2, userSkill1);
-                } else if (users.get(userId2).get(userSkill2) > users.get(userId1).get(userSkill1)) {
+                } else if (users.get(userId2).get(userSkill2) < users.get(userId1).get(userSkill1)) {
                     attack(users, userId2, userId1, userSkill2);
                 }
             }
@@ -103,11 +103,11 @@ public class Main3 {
     private static void attack(List<Map<String, Integer>> users, Integer attackUser, Integer defenseUser, String skill) {
         switch (skill) {
             case "skill1" ->
-                    users.get(defenseUser).put("hitPoint", users.get(defenseUser).get("hitPoint") - users.get(attackUser).get("attack1"));
+                    users.get(defenseUser).put("hitPoint", users.get(defenseUser).get("hitPoint") - users.get(attackUser).get("attackPoint1"));
             case "skill2" ->
-                    users.get(defenseUser).put("hitPoint", users.get(defenseUser).get("hitPoint") - users.get(attackUser).get("attack2"));
+                    users.get(defenseUser).put("hitPoint", users.get(defenseUser).get("hitPoint") - users.get(attackUser).get("attackPoint2"));
             case "skill3" ->
-                    users.get(defenseUser).put("hitPoint", users.get(defenseUser).get("hitPoint") - users.get(attackUser).get("attack3"));
+                    users.get(defenseUser).put("hitPoint", users.get(defenseUser).get("hitPoint") - users.get(attackUser).get("attackPoint3"));
         }
     }
 }
