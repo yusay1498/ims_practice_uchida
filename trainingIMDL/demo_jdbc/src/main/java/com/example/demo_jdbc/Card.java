@@ -5,6 +5,12 @@ public record Card(
         String name,
         Integer level,
         Integer elementId,
-        Integer summary
+        Integer top,
+        Integer right,
+        Integer bottom,
+        Integer left
 ) {
+    public Integer summary() {
+        return top + right + bottom + left;
+    }
 }
