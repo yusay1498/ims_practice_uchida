@@ -43,7 +43,9 @@ public class Main3 {
             int userId2 = scanner.nextInt() - 1;
             String eventName2 = scanner.next();
             String userSkill2 = skill(eventName2);
-            if (users.get(userId1).get("hitPoint") <= 0 || users.get(userId2).get("hitPoint") <= 0) {
+            assert userSkill1 != null;
+            assert userSkill2 != null;
+            if (users.get(userId1).get("hitPoint") >= 0 || users.get(userId2).get("hitPoint") >= 0) {
                 if (users.get(userId1).get(userSkill1) == 0) {
                     buff(users, userId1);
                     attack(users, userId2, userId1, userSkill2);
