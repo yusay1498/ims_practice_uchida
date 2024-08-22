@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Random;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -36,11 +37,10 @@ public class ReadableCode {
             String userAnswer = userAnswerScan();
 
             //CHANGED retryさせるのにあんなに長くなくていい
-            if (userAnswer.length() != digits || !userAnswer.matches("^[0-9]+$")) {
-                System.out.println("(Please retry)");
-                continue;
-            }
+            if (!isValidInput(userAnswer, digits)) continue;
 
+            //NOTE 入力が正しければturnが増える
+            // - retryの下に配置すればif文とかいらない
             turn++;
 
             //CHANGED 重複した文字の削除を完結にした
@@ -69,11 +69,12 @@ public class ReadableCode {
     }
 
     //NOTE 指定された桁数の答えを生成するメソッド
-    //HACK nanoTimeはちがうのでもいいかも
+    //CHANGED Randomを使って正しい乱数生成にした
     private static String createAnswer(int digits) {
-        StringBuilder answer = new StringBuilder();
+        StringBuilder answer = new StringBuilder(digits);
+        Random rand = new Random();
 
-        for (int i = 0; i < digits; i++) answer.append(System.nanoTime());
+        for (int i = 0; i < digits; i++) answer.append(rand.nextInt(10));
 
         return answer.toString();
     }
@@ -83,6 +84,15 @@ public class ReadableCode {
         Scanner scanner = new Scanner(System.in);
         System.out.print("> ");
         return scanner.nextLine();
+    }
+
+    //NOTE 数字以外やdigitsにそぐわない文字数の場合retryさせる
+    private static boolean isValidInput(String userAnswer, int digits) {
+        if (userAnswer.length() != digits || !userAnswer.matches("^[0-9]+$")) {
+            System.out.println("(Please retry)");
+            return false;
+        }
+        return true;
     }
 
     //NOTE 文字列内に存在する重複した文字を削除する
