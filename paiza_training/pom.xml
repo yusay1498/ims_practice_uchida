@@ -20,6 +20,7 @@
         <module>stringCut</module>
         <module>selectCharLerge</module>
         <module>stirngCount</module>
+        <module>stringCount2</module>
     </modules>
 
     <properties>
