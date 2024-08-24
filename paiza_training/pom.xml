@@ -19,6 +19,7 @@
         <module>addOrmulti</module>
         <module>stringCut</module>
         <module>selectCharLerge</module>
+        <module>stirngCount</module>
     </modules>
 
     <properties>
