@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b755d8ef-a02d-456d-a8ce-52c8596f889b" name="Changes" comment="" />
+    <list default="true" id="b755d8ef-a02d-456d-a8ce-52c8596f889b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../paiza_training/sortAndQuery/src/main/java/org/example/Main3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../paiza_training/sortAndQuery/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../paiza_training/sortAndQuery/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,9 +24,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2kag2UIZYOBj34Ac3jv0VHkZxFM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,7 +37,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/ubuntu/repositories/ims_practice_uchida/trainingIMDL/demo_spring_mvc",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/ubuntu/repositories/ims_practice_uchida/trainingIMDL/demo_thread_pool",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,6 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723526896735</updated>
       <workItem from="1723526897761" duration="2587000" />
+      <workItem from="1724460875803" duration="616000" />
     </task>
     <servers />
   </component>
