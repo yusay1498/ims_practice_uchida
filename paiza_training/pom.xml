@@ -12,6 +12,7 @@
         <module>scannerUser</module>
         <module>userClass</module>
         <module>game</module>
+        <module>sortAndQuery</module>
     </modules>
 
     <properties>
