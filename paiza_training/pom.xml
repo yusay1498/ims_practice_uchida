@@ -23,6 +23,7 @@
         <module>stringCount2</module>
         <module>sortCharAndNum</module>
         <module>sortCharAndNum2</module>
+        <module>findAlpha</module>
     </modules>
 
     <properties>
