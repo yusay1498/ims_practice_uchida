@@ -24,6 +24,7 @@
         <module>sortCharAndNum</module>
         <module>sortCharAndNum2</module>
         <module>findAlpha</module>
+        <module>gomoku</module>
     </modules>
 
     <properties>
