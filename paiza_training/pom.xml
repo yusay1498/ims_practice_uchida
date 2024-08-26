@@ -22,6 +22,7 @@
         <module>stirngCount</module>
         <module>stringCount2</module>
         <module>sortCharAndNum</module>
+        <module>sortCharAndNum2</module>
     </modules>
 
     <properties>
