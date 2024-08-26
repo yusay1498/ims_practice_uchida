@@ -21,6 +21,7 @@
         <module>selectCharLerge</module>
         <module>stirngCount</module>
         <module>stringCount2</module>
+        <module>sortCharAndNum</module>
     </modules>
 
     <properties>
