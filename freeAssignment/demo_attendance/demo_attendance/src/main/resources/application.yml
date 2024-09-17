@@ -1,0 +1,10 @@
+spring.application.name: demo_attendance
+spring:
+  datasource:
+    url: jdbc:h2:mem:attendance
+  sql:
+    init:
+      mode: always
+  h2:
+    console:
+      enabled: true

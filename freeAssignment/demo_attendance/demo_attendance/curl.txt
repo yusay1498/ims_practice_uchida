@@ -1,0 +1,50 @@
+コマンド例一覧
+
+GET (findAll)
+curl localhost:8080/attendances
+
+GET  (findById)
+curl localhost:8080/attendances/a5e5e9d4-40d7-4f7d-8b95-5a5d6d881ba4
+
+GET (findByEmployeeIdAndDate)
+curl -X GET "http://localhost:8080/attendances/searchAttendance?employeeId=emp001&date=2024-08-25"
+
+POST (FUll)
+curl -X POST "http://localhost:8080/attendances" \
+         -H "Content-Type: application/json" \
+         -d '{
+               "employeeId": "emp004",
+               "beginWork": "2024-08-26T09:00:00",
+               "finishWork": "2024-08-26T17:00:00"
+             }'
+
+
+POST (出勤)
+curl -X POST "http://localhost:8080/attendances" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "employeeId": "emp004",
+           "beginWork": "2024-08-26T09:00:00"
+         }'
+
+PUT (退勤)
+curl -X PUT "http://localhost:8080/attendances/a5e5e9d4-40d7-4f7d-8b95-5a5d6d881ba4" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "id": "a5e5e9d4-40d7-4f7d-8b95-5a5d6d881ba4",
+           "finishWork": "2024-08-26T18:00:00"
+         }'
+
+
+PUT (更新)
+curl -X PUT "http://localhost:8080/attendances/a5e5e9d4-40d7-4f7d-8b95-5a5d6d881ba4" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "id": "a5e5e9d4-40d7-4f7d-8b95-5a5d6d881ba4",
+           "beginWork": "2024-08-26T10:00:00",
+           "finishWork": "2024-08-26T18:00:00"
+         }'
+
+
+DELETE
+curl -X DELETE "http://localhost:8080/attendances/a5e5e9d4-40d7-4f7d-8b95-5a5d6d881ba4"
