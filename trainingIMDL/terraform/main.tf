@@ -10,5 +10,5 @@ terraform {
 
 resource "local_file" "foo" {
   filename = "/home/ubuntu/foo.txt"
-  content  = "bar"
+  content  = "bar-${var.environment}-${var.env_label}-${var.region}"
 }
